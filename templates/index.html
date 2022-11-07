@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        h2{
+            text-align: center;
+        }
+        button {
+            margin-left: 47%;
+        }
+        .prediction_output{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="color: black">
+        <form action="{{url_for('predict')}}" method="post">
+            <h2>Predictive Analysis</h2>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputzn" name="fixedacidity" placeholder="fixedacidity"
+                            required="required" />
+                        <label for="inputzn">Fixed_Acidity</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputzn" name="volatileacidity" placeholder="volatileacidity"
+                            required="required" />
+                        <label for="inputzn">Volatile_Acidity</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="citricacid"
+                            placeholder="citricacid" required="required" />
+                        <label for="inputcrim">Citric_Acid</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputzn" name="residualsugar" placeholder="residualsugar"
+                            required="required" />
+                        <label for="inputzn">Residual_Sugar</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="chlorides"
+                            placeholder="chlorides" required="required" />
+                        <label for="inputcrim">Chlorides</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputzn" name="freesulfurdioxide"
+                            placeholder="freesulfurdioxide" required="required" />
+                        <label for="inputzn">Free_Sulfur_DiOxide</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="totalsulfurdioxide" placeholder="totalsulfurdioxide"
+                            required="required" />
+                        <label for="inputcrim">Total_Sulfur_DiOxide</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="density" placeholder="density"
+                            required="required" />
+                        <label for="inputcrim">Density</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="ph" placeholder="ph"
+                            required="required" />
+                        <label for="inputcrim">PH</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="sulphates" placeholder="sulphates"
+                            required="required" />
+                        <label for="inputcrim">Sulphates</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-2 box_size">
+                <div class="col1">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="inputcrim" name="alcohol" placeholder="alcohol"
+                            required="required" />
+                        <label for="inputcrim">Alcohol</label>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit ">Quality Prediction</button>
+            </div>
+        </form>
+    </div>
+    
+    <br><br><h3>{{ prediction_text }}<h3>
+    
+
+
+</body>
+
+</html>
